@@ -1,0 +1,1 @@
+Ide szeretnénk feltölteni a végső pipelinent, prezentációt, stb... a projekt zárásakor.

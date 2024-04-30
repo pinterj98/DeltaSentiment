@@ -9,7 +9,7 @@ Rövid irodalmi áttekintés és konzultáció után a következő modellek hasz
 - [FinBert](https://huggingface.co/ProsusAI/finbert)
 - [FinVader](https://github.com/PetrKorab/FinVADER)
 - [Gemini](https://ai.google.dev/)
-- [Gemma](https://huggingface.co/google/gemma-2b)
+- [Gemma](https://huggingface.co/google/gemma-2b), [Gemma-Instruct](https://huggingface.co/google/gemma-2b-it)
 
 Mindegyik modellhez minimális működő példa található *Minimal Working Examples* mappában. 
 

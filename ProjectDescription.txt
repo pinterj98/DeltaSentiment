@@ -1,0 +1,34 @@
+ELOLJAROBAN:
+	Amit alabb olvastok az egy komplet projekt otlet. Mivel a rendelkezesre allo ~2 honap eleg limitalt igy legyen az a minimalis es szukseges cel amit el kell ernetek, hogy az 1.)-est es meg valamelyik masik pontot, tehat legalabb kettot, megvalositotok a major milestone-ok (1., 2., 3., *.) kozul.
+		-A szemelyes javaslatom: 1.) es *.) lenne. Az eredmenyeitek evalualasa mindig kritikusan fontos pont (illetve annak a leheto legtisztabb, kozerthetobb reprezentalasa; tegyuk fel, hogy a vegso eloadason nem lesz mindenki field expert es megis meg akarjak erteni, hogy miert helyes az eredmeny es annak az evalualasa).
+		-Termeszetesen ha 1.) es "valamelyik masik".) mellett rakjatok le a voksotok az is teljesen tokeletes. Egy kesz termek szempontjabol mindegyik major milestone kritikus.
+	Termeszetesen ha ugy alakul, hogy a komplett projekt otletet sikerul kiviteleznetek, az tobb mint oromteli! ;)
+
+
+"DeltaSentiment Projekt":
+ADAT:
+	-10 party-ra 10K reportok a legutobbi illetve az elozo penzugyi evbol
+PIPELINE + kivitelezes:
+Az otlet, hogy visszafele fogounk haladni:
+	1. Legyenek sentiment score-ok illetve delta sentiment score-ok, amiket ugy kaptok, hogy megnezitek, hogyan valtozott az egymast koveto evekben a sentiment score-ja az adott party-nak.:
+		-hasznaljunk ehhez LLM-eket:
+			-legyen valami nagy ipari modell (ChatGPT, GEMINI)
+			-legyen valami kisebb open source (valami mondjuk HuggingFace leader board-rol pl.: Mistral)
+		-hasznaljunk eggyel konvencionalisabb kisebb modelleket (jellemzoen valamilyen transformer architekturaju modellt)
+			-FinBERT
+			-FinVADER
+		-Ezen a ponton az adatot akar kezzel provide-oljuk a modelleknek. Megnezhetjuk, hogy egybe megkap mindent/relevansabbnak tuno reszeket kap csak meg. Itt boven lehet probalgatni.
+	2. Ha 1.-et kelloen korbejartuk akkor a bemeneti adat relevans reszeinek kereseset kellene automatizalni. Valamilyen szemantikus keresest akarunk csinalni a bemeneti adaton, hogy abbol a lenyeges reszekkel provide-oljuk tovabb a sentiment score-t ado modellunket.
+		-lehet valamilyen sajat magunk altal implementalt megoldas a semantic search megavlositasara ha mar embendingeltuk a bemeneteink:
+			-nezzunk cosine similarity-t a beagyazott eredeti szovegunk es egy altalunk provide-olt olyan szoveg kozott, amirol azt gondoljuk, hogy jol leirja azt a reszt, amit ki akarunk keresni az eredeti szovegbol
+		-lehet probalkozni valamilyen konyha keszebb dologgal mondjuk LlamaIndex kornyekerol
+	3. Ha 1. es 2. is megvannak, akkor automatizalni kellene az adatbeolvasast is. Tehat egy PDF->RAW TEXT pipeline komponenst kellene megalkotni. Itt a tipikus problemak a tagolasbol illetve a tablazatokbol es vagy a kepekbol/abrakbol adodnak.
+		-lehet probalkozni egyszerubb utility-kel, pl pdftotext
+		-illetve lehet probalkozni bonyolultabb modellekkel/pipelineokkal
+			-table transofmer, etc...
+		illetve itt is ra lehet nezni az LlamaIndex kornyekere, hatha van valami indokolhatoan jol mukodo konyhakesz megoldas arra
+	
+	*. Igazabol totalisan krucialis, hogy meg tudjatok vedeni a sentiment score-t illetve a delta sentiment score-t, amit kaptatok. Ehhez a vegehez kellene valamilyen megoldas, amivel meg tudjatok merni/evalualni tudjatok a model score/delta score-okat.
+	Erre forditsatok kulonos figyelmet! 
+		-llm-eknel erdekes lehet a RAG Triad framework
+		-a transformer-eknel, pedig egyebb a szakirodalomba reszletezett eljarasok

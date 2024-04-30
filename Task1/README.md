@@ -19,11 +19,10 @@ Fontos kérdés az eszközökre nézve többek között, hogy mekkora inputot fo
 
 Ezzel kapcsolatban a következő észrevételeket kaptuk:
 
+- FinBERT: 512 token max (kb. fél oldal). Szöveg hosszától erősen függ a kapott score, táblázatok is jelentősen befolyásolják.
+ 
+- FinVADER: hosszabb (néhány oldalas) szövegeket is megeszi, de ezekre a score 1-hez tart. Táblázatokra kevésbé érzékeny.
 
-
-.
-.
-.
 
 ## Megjegyzések
 

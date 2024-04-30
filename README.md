@@ -1,3 +1,3 @@
 # DeltaSentiment 
 
-A repository a Mesterséges Intelligencia Alkalmazásai (BME, TTK) tárgy keretében készülő Morgan Stanley Delta Sentiment projektjének dokumentációja.
+A repository a Mesterséges Intelligencia Alkalmazásai (BME, TTK) tárgy keretében készülő Delta Sentiment projektjének dokumentációja.

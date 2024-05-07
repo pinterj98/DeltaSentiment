@@ -28,3 +28,9 @@ Ezzel kapcsolatban a következő észrevételeket kaptuk:
 
 - Gemini csak VPN-en (pl.: USA) keresztül érhető el.
 - Gemma csak huggingface tokennel működik.
+
+
+## Tartalma a notebookoknak
+
+- sentiment_score_test_cases.ipynb: Hogyan változik a prediktált score, amennyiben az adatot felhigítjuk nem releváns információval.
+- FinBert_vs_FinVader.ipynb: Hogyan teljesít a FinVader és a FinBert a szemantikus kereséssel szűrt adatokon?

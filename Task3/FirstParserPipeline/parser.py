@@ -13,9 +13,13 @@ def read_html_files(folder_path):
     html_files = {}  
     for filename in os.listdir(folder_path):
         if filename.endswith(".html"):  
-            file_path = os.path.join(folder_path, filename)  
-            with open(file_path, 'r', encoding='utf-8') as file:
-                html_files[filename] = BeautifulSoup(file, "html.parser")
+            file_path = os.path.join(folder_path, filename)
+            try: 
+                with open(file_path, 'r', encoding='utf-8') as file:
+                    html_files[filename] = BeautifulSoup(file, "html.parser")
+            except:
+                with open(file_path, 'r', encoding='windows-1252') as file:
+                    html_files[filename] = BeautifulSoup(file, "html.parser")
     return html_files
 
 
@@ -26,7 +30,7 @@ def get_paragraphs(html_soup):
     for paragraph in html_soup.find_all('p'):
         words = paragraph.text.split()
         if len(words) >= min_word_count:
-            paragraphs_with_min_words.append(paragraph.text)
+            paragraphs_with_min_words.append(paragraph.text.replace('\t',' ').replace('\n',' '))
 
     return paragraphs_with_min_words
 

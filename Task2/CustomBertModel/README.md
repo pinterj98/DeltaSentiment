@@ -10,3 +10,5 @@ Az eljárás során a következő lépéseket tettük:
 - Kifagyasztottuk az embedder réteget és az egészet tanítottuk (csak 1 epochig, mert nagyon hamar túltanul).
 - Újra lefagyasztottuk és folytattuk a klasszifikációs rétegek tanítását, amig nem stagnált újra a teljesítmény. 
 
+Technikai információk:
+A tanítás NVIDIA RTX 4060 GPUn történt. Lefagyasztott embedderrel körülbelül ~3 perc egy epoch (512 batch size), embeddert is tanítva körülbelül ~12 perc egy epoch (32 batch size).

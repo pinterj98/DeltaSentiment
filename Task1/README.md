@@ -28,7 +28,7 @@ Ezzel kapcsolatban a következő észrevételeket kaptuk:
 
 - Gemini csak VPN-en (pl.: USA) keresztül érhető el.
 - Gemma csak huggingface tokennel működik.
-- yiyanghkust/finbert-tone 10-K reportokon volt tanítva.
+- yiyanghkust/finbert-tone 10-K reportokon volt tanítva (fine-tune-olva).
 
 
 ## Tartalma a notebookoknak

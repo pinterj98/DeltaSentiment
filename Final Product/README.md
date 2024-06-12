@@ -1,1 +1,1 @@
-Ide szeretnénk feltölteni a végső pipelinent, prezentációt, stb... a projekt zárásakor.
+A végső pipeline az Applikáció mappában található, a Deltasentiment-slides.pdf pedig a projekt prezentációnkat.

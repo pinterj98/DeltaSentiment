@@ -1,0 +1,1 @@
+Fontos: Az applikáció önmagában nem fog elindulni, mert szükség van a saját neurális hálónkra, amit mérete miatt ide nem töltöttem fel. 
